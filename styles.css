@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, deepaquamarine, ocean, steelblue, seafom);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.box {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    overflow: auto;
+    max-height: 80vh;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.left-box {
+    flex: 1;
+    margin-right: 10px;
+    background: linear-gradient(45deg, purple, pink, blue);
+    color: #000;
+    transition: background 1s ease;
+}
+
+.left-box:hover {
+    background: linear-gradient(45deg, purple, pink, blue);
+    background-size: 200% 200%;
+    animation: gradientHover 3s ease infinite;
+    color: #fff;
+}
+
+@keyframes gradientHover {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.right-box {
+    flex: 2;
+    background: #e3f2fd;
+    color: #000;
+}
+
+.surah-item {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.surah-item:last-child {
+    border-bottom: none;
+}
+
+.surah-item h3 {
+    margin: 0;
+    font-size: 1em;
+    color: #000;
+}
+
+.surah-item p {
+    margin: 5px 0 0;
+    color: #444;
+}
+
+.surah-item:hover {
+    background: #8e44ad;
+    transform: translateX(10px);
+    color: #fff;
+}
+
+#surah-detail h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #2980b9;
+}
+
+#surah-detail p {
+    margin: 5px 0;
+    color: #000;
+}
+
+.tafsir {
+    margin-top: 20px;
+}
+
+.audio-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.audio-container audio {
+    margin-left: 10px;
+}
+
+.play-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(45deg, purple, pink, blue);
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+}
+
+.play-button:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-box {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
